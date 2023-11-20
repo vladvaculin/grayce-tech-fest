@@ -1,0 +1,17 @@
+.terminal-message {
+  position: relative;
+  display: inline-block;
+  margin-right: 20px;
+  background-color: rgb(6 78 59);
+  height: 24px;
+}
+.terminal-message::before {
+  content: "";
+  width: 0;
+  height: 100%;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent; /* 40px height (20+20) */
+  border-left: 12px solid rgb(6 78 59);
+  position: absolute;
+  right: -12px;
+}

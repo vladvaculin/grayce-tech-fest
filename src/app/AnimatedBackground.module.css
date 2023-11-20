@@ -1,0 +1,214 @@
+.background-animate {
+  background-size: 400%;
+
+  -webkit-animation: AnimationName 3s ease infinite;
+  -moz-animation: AnimationName 3s ease infinite;
+  animation: AnimationName 3s ease infinite;
+}
+@keyframes AnimationName {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.rotate-bl {
+  -webkit-transition: transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition: transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -webkit-transform-origin: bottom left;
+  transform-origin: bottom left;
+}
+.rotate-bl-active {
+  -webkit-transform: rotate(-80deg);
+  transform: rotate(-80deg);
+}
+
+.title-header {
+  color: #fee;
+  text-shadow: 0 0 2px, 0 0 1em #ff4444, 0 0 0.5em #ff4444, 0 0 0.1em #ff4444;
+}
+
+.glow-l,
+.glow-r {
+  position: relative;
+}
+.glow-l::before,
+.glow-r::before {
+  content: "";
+  height: 100%;
+  width: 1px;
+  position: absolute;
+  top: 0;
+}
+
+.glow-l::before {
+  box-shadow: -2px 0px 0.7em 2px #6ee7b7;
+  left: 0;
+}
+
+.glow-r::before {
+  box-shadow: 2px 0px 0.7em 2px #6ee7b7;
+  right: 0;
+}
+
+.title-top {
+  background: rgb(var(--background-start-rgb));
+  /* border-left: 0.2em solid #37ddfd;
+  border-right: 0.2em solid #37ddfd; */
+  border: 0.2em solid #37ddfd;
+  border-radius: 1em;
+  box-shadow: inset 0 0 0.4em #05d5fc;
+  color: #9ceefe;
+  text-shadow: 0 0 0.4em #05d5fc;
+  left: 50%;
+  padding: 0 1em;
+  position: absolute;
+  top: -69.265px;
+  text-align: center;
+  transform: translateX(-50%);
+  animation: flicker 2s linear infinite;
+}
+
+.title-border {
+  border: 0.2em solid #37ddfd;
+  border-radius: 1em;
+  box-shadow: inset 0 0 0.4em #05d5fc, 0 0 0.4em #05d5fc;
+  padding: 5em;
+  position: relative;
+  animation: flicker 2s linear infinite;
+}
+@keyframes flicker {
+  from {
+    border-color: rgba(55, 221, 253, 1);
+  }
+  4% {
+    border-color: rgba(55, 221, 253, 0.9);
+  }
+  6% {
+    border-color: rgba(55, 221, 253, 0.85);
+  }
+  8% {
+    border-color: rgba(55, 221, 253, 0.95);
+  }
+  10% {
+    border-color: rgba(55, 221, 253, 0.9);
+  }
+  11% {
+    border-color: rgba(55, 221, 253, 0.922);
+  }
+  12% {
+    border-color: rgba(55, 221, 253, 0.7);
+  }
+  14% {
+    border-color: rgba(55, 221, 253, 0.85);
+  }
+  16% {
+    border-color: rgba(55, 221, 253, 0.98);
+  }
+  17% {
+    border-color: rgba(55, 221, 253, 0.9);
+  }
+  19% {
+    border-color: rgba(55, 221, 253, 0.83);
+  }
+  20% {
+    border-color: rgba(55, 221, 253, 0.99);
+  }
+  24% {
+    border-color: rgba(55, 221, 253, 1);
+  }
+  26% {
+    border-color: rgba(55, 221, 253, 0.94);
+  }
+  28% {
+    border-color: rgba(55, 221, 253, 0.98);
+  }
+  37% {
+    border-color: rgba(55, 221, 253, 0.73);
+  }
+  38% {
+    border-color: rgba(55, 221, 253, 0.3);
+  }
+  39% {
+    border-color: rgba(55, 221, 253, 0.96);
+  }
+  42% {
+    border-color: rgba(55, 221, 253, 1);
+  }
+  44% {
+    border-color: rgba(55, 221, 253, 0.97);
+  }
+  46% {
+    border-color: rgba(55, 221, 253, 0.94);
+  }
+  56% {
+    border-color: rgba(55, 221, 253, 0.9);
+  }
+  58% {
+    border-color: rgba(55, 221, 253, 0.9);
+  }
+  60% {
+    border-color: rgba(55, 221, 253, 0.99);
+  }
+  68% {
+    border-color: rgba(55, 221, 253, 1);
+  }
+  70% {
+    border-color: rgba(55, 221, 253, 0.9);
+  }
+  72% {
+    border-color: rgba(55, 221, 253, 0.95);
+  }
+  93% {
+    border-color: rgba(55, 221, 253, 0.93);
+  }
+  95% {
+    border-color: rgba(55, 221, 253, 0.95);
+  }
+  97% {
+    border-color: rgba(55, 221, 253, 0.93);
+  }
+  to {
+    border-color: rgba(55, 221, 253, 1);
+  }
+}
+
+.title-letter-blink {
+  animation: blink linear infinite 3s;
+}
+
+@keyframes blink {
+  78% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  79% {
+    color: #333;
+  }
+  80% {
+    text-shadow: none;
+  }
+  81% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  82% {
+    color: #333;
+    text-shadow: none;
+  }
+  83% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  92% {
+    color: #333;
+    text-shadow: none;
+  }
+  92.5% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+}

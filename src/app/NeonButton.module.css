@@ -1,0 +1,20 @@
+.neon-button {
+  border: 1px solid #cb3535;
+  color: #68939c;
+  padding: 10px 1.8em;
+}
+
+.neon-button:hover {
+  -webkit-animation: intermittente 0.01s infinite alternate;
+  animation: intermittente 0.05s infinite alternate;
+  box-shadow: 0px 0px 35px rgba(204, 0, 0, 0.3), 0 0 11px rgba(204, 0, 0, 0.3),
+    0 0 2px rgba(255, 0, 0, 0.3), 0 0 1px rgba(204, 0, 0, 0.3),
+    0 0px 17px rgba(204, 0, 0, 0.3), inset 0px 0 17px rgba(204, 0, 0, 0.3),
+    inset 0px 0 30px rgba(204, 0, 0, 0.3);
+}
+
+@keyframes intermittente {
+  75% {
+    opacity: 0.7;
+  }
+}
